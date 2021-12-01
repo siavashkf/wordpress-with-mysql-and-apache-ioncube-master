@@ -16,9 +16,9 @@ services:
         - name: mysql_vol
           mount: /var/lib/mysql/
       envs:
-        - MYSQL_ROOT_PASSWORD: random_2
+        - MYSQL_ROOT_PASSWORD: random_
           type: password
         - MYSQL_DATABASE: wordpress
         - MYSQL_USER: dbuser01
-        - MYSQL_PASSWORD: random_1
+        - MYSQL_PASSWORD: random_2
           type: password
