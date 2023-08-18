@@ -1,14 +1,14 @@
-# Infrastructure as code in for doprax.com
-volumes:
-  - name:  http_root
-    mount: /var/www/html/
-
-envs:
-    - WORDPRESS_DB_HOST: mysql
-    - WORDPRESS_DB_NAME: wordpress
-    - WORDPRESS_DB_USER: dbuser01
-    - WORDPRESS_DB_PASSWORD: random_1
-      type: password
+main:
+  volumes:
+    - name:  http_root
+      mount: /var/www/html/
+  
+  envs:
+      - WORDPRESS_DB_HOST: mysql
+      - WORDPRESS_DB_NAME: wordpress
+      - WORDPRESS_DB_USER: dbuser01
+      - WORDPRESS_DB_PASSWORD: random_1
+        type: password
 services:
   - mysql:
       tag: 5.7
